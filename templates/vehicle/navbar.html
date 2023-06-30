@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+/>
+  <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-padding-top: 2rem;
+      scroll-behavior: smooth;
+      list-style: none;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+  }
+  
+  :root {
+      --main-color: #fe5b3d;
+      --second-color: #ffac38;
+      --text-color: #444;
+      --gradiant: linear-gradient(#fe5b3d, #ffac38);
+  
+  }
+  
+  html::-webkit-scrollbar {
+      width: 0.5rem;
+  }
+  
+  html::-webkit-scrollbar-track{
+      background: transparent;
+  }
+  
+  html::-webkit-scrollbar-thumb{
+      background: var(--main-color);
+      border-radius: 5rem;
+  }
+  
+  section{
+      padding: 50px 100px;
+  
+  }
+  
+  header{
+      position: fixed;
+      width: 100%;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #eeeff1c8;
+      padding: 15px 100px;
+  }
+  
+  
+  .logo img{
+      width: 40px;
+  }
+  
+  .navbar{
+      display: flex;
+  }
+  
+  .navbar li{
+      position: relative;
+  }
+  
+  .navbar a{
+      font-size: 1rem;
+      padding: 10px 20px;
+      color: var(--text-color);
+      font-weight: 500;
+  }
+  .navbar a:hover{
+
+    text-decoration: none !important;
+
+  }
+  .navbar a::after{
+      content: "";
+      width:0;
+      height: 3px;
+      background: var(--gradiant);
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      transition: 0.5s;
+  }
+  
+  .navbar a:hover::after {
+
+    width: 100%;
+  }
+  
+  #menu-icon{
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 10001;
+      display: none;
+  }
+  
+  .header-btn a{
+      padding: 10px 20px;
+      color: var(--text-color);
+      font-weight: 500;
+  }
+  
+  .header-btn .sign-in{
+      background: #474fa0;
+      color: #fff;
+      border-radius: 0.5rem;
+  
+  }
+  
+  .header-btn .sign-in:hover {
+      background: var(--main-color);
+  }
+  
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <header>
+    <a href="/" class="logo"><img src='{% static "images/2.png" %}' alt="" /></a>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li><a href="/customerclick">Customer</a></li>
+      <li><a href="/mechanicsclick">Mechanic</a></li>
+      <li><a href="/adminclick">Admin</a></li>
+      <li><a href="/aboutus">About</a></li>
+      <li><a href="contactus">Contact us</a></li>
+      <li><a href="/informationclick">Information</a></li>
+      <!-- <li><a href="contactus"></a></li> -->
+    </ul>
+    <div class="header-btn">
+      <a href="/customerclick" class="sign-up">Sign up</a>
+      <a href="customerlogin" class="sign-in">Sign In</a>
+    </div>
+  </header>
+
+
+</body>
+
+</html>

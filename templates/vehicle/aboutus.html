@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+	<title>About us</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins' , sans-serif;
+    color:#222;
+    padding-bottom:50px ;
+
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+h1.logo a{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.hero{
+    background-image: url('{% static "images/white.jpg" %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 80vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    z-index: -2 !important;
+}
+.hero::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.hero h1{
+    font-size: 46px;
+    margin: -20px 0 20px;
+}
+.hero p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.content h2,
+.content h3{
+    font-size: 150%;
+    margin: 20px 0;
+}
+.content p{
+    color: #555;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+}
+.header{
+    padding-top:60px;
+    color:#444;
+    font-size:20px;
+    margin:auto;
+    line-height: 50px;
+}
+.container1{
+    text-align: center;
+    background:white;
+}
+.sub-container{
+    max-width:1200px;
+    margin:auto;
+    padding:48px 0;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+
+}
+.teams{
+    margin:10px;
+    padding:22px;
+    max-width:30%;
+    cursor:pointer;
+    transition:0.4s;
+    box-sizing:border-box;
+}
+.teams:hover{
+    background:#ddd;
+    border-radius:12px;
+}
+.teams img{
+    width:150px;
+    height:150px;
+
+}
+.name{
+    padding:12px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform:uppercase;
+}
+.about{
+    text-align: justify;
+    margin:20px 5;
+    font-weight: bold;
+    color:#4e4e4e
+}
+.about1{
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+    background: #212226;
+    padding: 20px;
+}
+footer p{
+    color: #fff;
+}
+	</style>
+
+
+
+
+
+  <!-- <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    } -->
+  <!-- </style> -->
+
+  <title></title>
+</head>
+
+<body>
+
+  {% include "vehicle/navbar.html" %}
+  <br><br><br><br>
+  <!-- <center>
+    <h3 class='alert alert-success' style="margin-bottom:0px;">About Us !</h3>
+  </center>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    <h1 class="display-4">Hello Rider</h1>
+    <p class="lead">A genuine solution to vehicle problems</p>
+    <hr class="my-4">
+    <p>Explore our Website.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
+    </p>
+  </div>
+  <marquee behavior="scroll" direction="left">
+   <img src="{% static "images/ferrari.png" %}" width="120" height="80" alt="ferrari" />
+    <img src="{% static "images/ford.png" %}" width="120" height="80" alt="ford" />
+   <img src="{% static "images/lambo.png" %}" width="120" height="80" alt="lambo" />
+   <img src="{% static "images/mahindra.png" %}" width="120" height="80" alt="mahindra" />
+   <img src="{% static "images/tvs.png" %}" width="120" height="80" alt="tvs" />
+   <img src="{% static "images/tata.png" %}" width="120" height="80" alt="tata" />
+   <img src="{% static "images/hero.png" %}" width="120" height="80" alt="hero" />
+   <img src="{% static "images/rolls.png" %}" width="120" height="80" alt="rolls" />
+   <img src="{% static "images/suzuki.png" %}" width="120" height="80" alt="suzuki" />
+ </marquee> -->
+
+ <div class="hero">
+  <div class="container">
+    <h1>Vehicle Service Management</h1>
+    
+  </div>
+</div>
+<div class="container1">
+  <div class="header">
+    <h1>ABOUT US</h1>
+    
+  </div>
+  <div class="about1">At Company name, we are passionate about our work. We are certified engineers, technicians and are qualified to perform all possible services that your standard, hybrid or even electric vehicle may require. We are more specialized in high voltage systems services supported by our bespoke computer diagnostics. We provide holistic vehicle care solutions for any type of service or repairs on traditional components of your car like brakes, suspension, etc. We completely endorse the quality and authenticity of our repairs of electric vehicles and hybrid auto. </div>
+  <div class="sub-container">
+  <div class="teams">
+    <div class="name">Our Mission </div>
+    <img src='{% static "images/images.png" %}' alt="">
+    <div class="about">Our Mission is to serve our customers and always deliver the highest level of customer service to develop our team and strive to constantly improve and to conduct ourselves in an environmentally responsible manner.</div>
+  </div>
+  <div class="teams">
+    <div class="name">Our Vision</div>
+    <img src='{% static "images/certificate.jpg" %}' alt="">
+    <div class="about">To be the world’s most exciting leader in automotive business intelligence solutions. We will generate excitement through implementing pioneering ideas, problem solving & going beyond our customer's expectations.</div>
+    
+  </div>
+  <div class="teams">
+    <div class="name">Core Values</div>
+    <img src='{% static "images/repair.webp" %}' alt="">
+    <div class="about">
+      <ul>
+        <li>Teamwork through Trust and Respect.</li>
+        <li>Commitment to Customer Enthusiasm.</li>
+        <li>Accountability at all Levels.</li>
+        <li>Passion for Winning.</li>
+      </ul>
+    </div>
+    
+  </div>
+    </div>
+  
+</div>
+
+
+
+
+<script >
+  const nav = document.querySelector('.nav')
+window.addEventListener('scroll', fixNav)
+
+function fixNav() {
+  if(window.scrollY >nav.offsetHeight + 150) {
+      nav.classList.add('active')
+  } else {
+
+      nav.classList.remove('active')
+  } 
+}
+</script>
+
+
+
+
+
+
+
+
+  {% include "vehicle/footer.html" %}
+</body>
+
+</html>

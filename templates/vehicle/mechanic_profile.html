@@ -1,0 +1,163 @@
+{% extends 'vehicle/mechanicbase.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <style media="screen">
+    img{
+    border-radius: 50%;
+  }
+  .center {
+    margin: auto;
+    width: 60%;
+  }
+  .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+} */
+
+/* .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+} */
+
+/* .button:hover span {
+  padding-right: 25px;
+} */
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+
+
+
+.main {
+    margin-top: 2%;
+    margin-left: 29%;
+    font-size: 28px;
+    padding: 0 10px;
+    width: 58%;
+}
+
+.main h2 {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.main .card {
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 0 grey;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 50px;
+}
+
+.main .card table {
+    border: none;
+    font-size: 16px;
+    height: 270px;
+    width: 80%;
+}
+
+
+  </style>
+</head>
+
+<br><br><br><br><br>
+
+<div class="main">
+  <h2>IDENTITY</h2>
+  <div class="card">
+      <div class="card-body">
+          <!-- <i class="fa fa-pen fa-xs edit"></i> -->
+          <table>
+            <img style="width:200px; height:200px; margin-left:200px;" src="{%static mechanic.profile_pic.url%}" alt="">
+              <tbody>
+                  <tr>
+                      <td>Name</td>
+                      <td>:</td>
+                      <td>{{mechanic}}</td>
+                  </tr>
+                  <tr>
+                      <td>Mobile</td>
+                      <td>:</td>
+                      <td>{{mechanic.mobile}}</td>
+                  </tr>
+                  <tr>
+                      <td>Skills</td>
+                      <td>:</td>
+                      <td>{{mechanic.skill}}</td>
+                  </tr>
+                  <tr>
+                      <td>Address</td>
+                      <td>:</td>
+                      <td>{{mechanic.address}}</td>
+                  </tr>
+                
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+
+
+
+
+
+
+<!-- <div class="center">
+  <img style="width:200px; height:200px; margin-left:200px;" src="{%static mechanic.profile_pic.url%}" alt="">
+  <div class="w3-panel w3-blue">
+    <h3 class="w3-text-orange" style="text-shadow:1px 1px 0 #444"><b>Name : {{mechanic}}</b></h3>
+    <h3 class="w3-text-orange" style="text-shadow:1px 1px 0 #444"><b>Mobile : {{mechanic.mobile}}</b></h3>
+    <h3 class="w3-text-orange" style="text-shadow:1px 1px 0 #444"><b>Skill : {{mechanic.skill}}</b></h3>
+    <h3 class="w3-text-orange" style="text-shadow:1px 1px 0 #444"><b>Address : {{mechanic.address}}</b></h3>
+  </div>
+</div> -->
+
+<div style="text-align: center;">
+  <a href="/edit-mechanic-profile"><button class="button" ><span>Edit Profile </span></button></a>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

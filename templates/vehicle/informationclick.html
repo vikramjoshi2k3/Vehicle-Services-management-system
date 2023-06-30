@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Service Website</title>
+    <!-- <link rel="stylesheet" href="aboutstyle.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #fe5b3d;
+    --second-color: #ffac38;
+    --text-color: #444;
+    --gradiant: linear-gradient(#fe5b3d, #ffac38);
+
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 50px 100px;
+
+}
+
+/* header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1c8;
+    padding: 15px 100px;
+}
+
+
+.logo img{
+    width: 40px;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar li{
+    position: relative;
+}
+
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.navbar a::after{
+    content: "";
+    width:0;
+    height: 3px;
+    background: var(--gradiant);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+.header-btn a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.header-btn .sign-in{
+    background: #474fa0;
+    color: #fff;
+    border-radius: 0.5rem;
+
+}
+
+.header-btn .sign-in:hover {
+    background: var(--main-color);
+} */
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size:400px 400px;
+    display: grid;
+    align-items: center;
+    margin-top: -75px ;
+    margin-bottom: -10rem;
+    
+    
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 350px;
+}
+
+.text span{
+    color: var(--main-color);
+}
+
+.text p{
+    margin: 00.5rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.text a{
+    color:rgb(255, 200, 0) ;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.heading h1{
+    font-size: 2rem;
+}
+
+
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-img img{
+    width: 700px;
+    margin-left: 370px;
+}
+
+.about-img1 img{
+    width: 800px;
+    margin-left: 340px;
+    margin-top: -50px;
+}
+
+
+
+.reviews-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, auto));
+    gap: 1rem;
+    margin-top: 0rem;
+}
+
+.rev-img {
+    width: 70px;
+    height: 70px;
+}
+
+.rev-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+
+.reviews-container .box{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.reviews-container .box h1{
+    font-size: 2rem;
+    
+
+}
+.reviews-container .box span{
+    
+    color: #c12e21;
+    font-size: 1.5rem;
+
+}
+
+.reviews-container .box p{
+    font-style: initial;
+    color: #555ca4;
+    font-size: 1.2rem;
+
+}
+
+.reviews-container .box .stars .bx{
+    color: var(--main-color);
+}
+
+ .lbtn{
+    background: #474fa0;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+
+}
+
+ .lbtn:hover {
+    background: var(--main-color);
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    background: #474fa0;
+    padding: 20px;
+    border-radius: 0.5rem;
+}
+
+.cont h1,i{
+    color:#ffac38;
+}
+
+.home1 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size:400px 400px;
+    display: grid;
+    align-items: center;
+    margin-top: -100px ;
+    margin-bottom: -10rem;
+    
+    
+}
+
+.text1 h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    align-items: center;
+    margin-left: 400px;
+}
+
+.text1 span{
+    color: var(--main-color);
+}
+
+.text1 p{
+    margin: 00.5rem 0 1rem;
+    font-size: 1.1rem;
+}
+
+.text1 a{
+    color:rgb(255, 145, 0) ;
+}
+
+.text1 span{
+    color: #c12e21;
+    font-size: 30px;
+}
+
+
+
+/*problems page*/
+
+.homep {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size:400px 400px;
+    display: grid;
+    align-items: center;
+    margin-top: -100px ;
+    margin-bottom: -10rem;
+    
+    
+}
+
+.textp h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    align-items: center;
+    margin-left: 300px;
+}
+
+.textp span{
+    color: var(--main-color);
+}
+
+.textp p{
+    margin: 00.5rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.textp a{
+    color:rgb(255, 200, 0) ;
+}
+
+.grib{
+  
+    height: 1500px;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 350px 350px ;
+    grid-template-rows: 350px 350px ;
+    column-gap: 230px;
+}
+
+.gri{
+    height: 310px;
+    width: 110px;
+
+}
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+
+    {% include "vehicle/navbar.html" %}
+    
+
+    <section class="home" id="home">
+        <div class="text">
+          <span><h1>40 Basic Parts Of A Car</h1></span>
+          <p>
+              Do you ever think about <a href="https://www.engineeringchoice.com/how-does-a-car-engine-work/">how your car works?</a> Do you know which car parts are most important? It’s essential for a responsible vehicle owner to have basic knowledge and understanding of the vehicle he or she drives.<br><br>
+  
+  
+              Here are the most important car parts you should educate yourself about in case you run into <a href="/problem">some unexpected issues</a>, or even worse, a car accident.
+          </p>
+        </div>
+  
+       
+        
+        
+      </section>
+      <section class="about" id="about">
+          <div class="heading">
+           
+              
+          </div>
+         <div class="about-container">
+          <div class="about-img">
+              <img src='{% static "images/part.png" %}' alt="">
+          </div>
+          
+         </div>
+  
+      </section>
+  
+      
+      <section class="reviews" id="reviews">
+          <div class="reviews-container">
+          
+              <div class="box">
+                  <h1>Car Parts Name</h1>
+                  <span>These are the main parts of car:</span>
+                  <p>1. Engine</p>
+                  <p>2. Transmission</p>
+                  <p>3. Battery</p>
+                  <p>4. Alternator</p>
+                  <p>5. Radiator</p>
+                  <p>6. Front Axle</p>
+                  <p>7. Front Steering and Suspension</p>
+                  <p>8. Brakes</p>
+                  <p>9. Gear Lever</p>
+                  <p>10. Steering wheel.</p>
+                  <p>11. Windscreen</p>
+                  <p>12. Speedometer</p>
+                  <p>13. Trunk</p>
+                  <p>14. Fuel Tank</p>
+                  <p>15. Rear Axle</p>
+              </div>
+          </div>
+      </div>
+      </section>
+  
+      <section class="home1" id="home">
+          <div class="text1">
+            
+            <p>
+              <span>An automobile has several numbers of parts. But there are four essential parts of an automobile.</span> <br>These are:
+             <br>
+             -The Chassis.<br>
+             -The Engine.<br>
+             -Transmission System.<br>
+             -Body.
+            </p>
+  
+            <p>Apart from these four essential parts of an automobile, there are controls and auxiliaries. The controls are meant for controlling the movement of the vehicle. The auxiliaries are additional components meant for providing comfort to the user of the automobile.</p>
+            <br>
+            <p>Let’s Discuss one by one part of a car:</p>
+  
+  
+            <span>1. The Chassis</span>
+            <p>The chassis of an automobile has the frame, suspension system, axles, and wheel as the main components. The frame could be in the form of a conventional chassis or unit construction may be adopted.</p>
+            <br>
+            <p>In a conventional chassis frame, the frame forms the main skeleton of the vehicle. The frame provides a foundation for the engine and the body of the vehicle. The frame is constructed from square or box-shaped steel members strong enough to support the weight of the body and other components.</p>
+            <br>
+            <p>The automobile frame is usually made up of a number of members welded or riveted together to give the final shape. The engine is mounted on the frame with rubber pads which absorb vibrations and also provide damping of these vibrations. Absorption and damping of vibrations protect passengers from discomfort caused by shocks.</p>
+            <br>
+  
+            <span>2. Engine</span>
+            <p>The engine is a power generator/power plant or a motor, which provides power to drive the automobile.
+  
+              The engine is the heart of your car. It is a complex machine built to convert heat from burning gas into the force that turns the road wheels. It consists of two basic parts: the lower, heavier section is the cylinder block, a casing for the engine’s main moving parts; the detachable upper cover is the cylinder head.</p>
+            <br>
+            <p> In most automobile engines, the explosive power of the mixture of air and gasoline drives the pistons. The pistons turn a crankshaft to which they are attached. The rotating force of the crankshaft makes the automobile’s wheels turn.
+  
+              Some automobiles are powered by another kind of engine, known as the rotary valve, rotating combustion engine, or Wankel engine. The rotary valve engine also draws in a mixture of air and fuel, which is then compressed and burnt.</p>
+            <br>
+            <p>A motor revolving in an elliptical chamber is connected to a shaft, which finally drives the rear wheels. In most automobiles, the engine is mounted at the front end of the car, with the clutch and gearbox immediately behind it; the engine, clutch, and gearbox are assembled into a single unit.</p>
+            <br>
+  
+            <span>3. Transmission System</span>
+            <p>The main function of the transmission is to provide the necessary variation to the torque applied by the engine to the wheels. This is achieved by changing the gearing ratio between the engine output shaft and the drive shaft.
+  
+              A car transmission is a vehicle’s <a href ="https://www.engineeringchoice.com/what-is-gearbox/">gearbox.</a> It’s roughly analogous to the gear shifter and chain system that bicycles use.</p>
+            <br>
+            <p>These components are always mounted straight on the engine so that their attached belt and gear system can effectively convert the combustion power produced by the engine into physical momentum.
+  
+              A transmission changes gears depending on car speed and accelerator input (i.e., how far down you push the pedal of your car) so that the engine’s RPM or “revolutions per minute” are kept appropriately low.</p>
+            <br>
+            <p>This provides two benefits: Fuel consumption is decreased, and The turning gears do not overload your engine.</p>
+            <br>
+  
+            <span>4. The Car Body</span>
+            <p>The main purpose of the bodywork is to provide accommodation for the driver and passengers, with suitable protection against wind and weather. The degree of comfort provided depends upon the type of car and its cost.</p>
+            <br>
+            <p>The body on the first automobiles was little more than a platform with seats attached. It gradually developed into a closed compartment complete with a roof and windows. The modern automobile body is constructed of sheet steel formed to the required shape in giant punch presses.
+  
+              Most of the body components are welded together to form a light rattle-free unit. Automobiles may also be classed on the basis of their body style.
+              
+              </p>
+  
+              
+            <span>5. Battery</span>
+            <p>Your car battery provides the zap of electricity needed to put electrical components to work. Talk about a pretty huge responsibility. Without battery power, your car, as you’ve probably noticed, won’t start.</p>
+            <br>
+            <p>Let’s take a look at how that powerful little box works:<br>
+  
+             <h2>- A chemical reaction puts your car in action:</h2> Your battery converts chemical energy into the electrical energy necessary to power your car, delivering voltage to the starter.
+             <h2>- Keep the electric current steady:</h2>  Not only does your battery provide the energy required to start your car, but it’s also stabilizing the voltage (that’s the term for the energy supply) in order to keep your engine running. A lot’s riding on the battery. Call it the ‘little box that could.’</p>
+            <br>
+           
+            <br>
+            <br>
+            
+            <span>6. Alternator</span>
+            <p>While the battery is essential for starting your car when it’s off, the alternator keeps your car alive when the engine is running.
+  
+              The alternator powers most car’s electronic components while you’re driving around or idling, including your headlights, electric steering, power windows, windshield wipers, heated seats, dashboard instruments, and radio.</p>
+            <br>
+            <p>The alternator supplies all of them with direct current (DC) power. Your alternator is also responsible for charging your car battery while driving.</p>
+            <br>
+            <p>The alternator works by turning mechanical energy into electrical energy. When your engine is on, it powers a drive belt that rests on a pulley attached to the alternator. The pulley turns the alternator’s rotor shaft, which spins a set of magnets around a coil.</p>
+            <br>
+  
+  
+  
+               
+            <span>7. Radiator</span>
+            <p>A radiator helps to eliminate excess heat from the engine. It is part of the engine’s cooling system, which also includes a liquid coolant, hoses to circulate the coolant, a fan, and a thermostat that monitors the coolant temperature.</p>
+            <br>
+            <p>The coolant travels through the hoses from the radiator, through the engine to absorb the excess engine heat, and back to the radiator.
+  
+              Once it returns to the radiator, thin metal fins release the heat from the coolant to the outside air as the hot liquid passes through it. </p>
+            <br>
+            <p>Cool air flows into the radiator through the car’s grille to aid in this process, and when the vehicle isn’t moving, such as when you’re idling in traffic, the system’s fan will blow air to help reduce the heated coolant’s temperature and blow the hot air out of the car.</p>
+            <br>
+  
+  
+            <span>8. Axles</span>
+            <p>Axles are the shafts on which road wheels are mounted. The road wheels are provided with the required drive through these axles.</p>
+            <br>
+            <p><h3>-Front Axle.</h3> It’s a part of the suspension system, Located in the front of the vehicle, this axle is responsible for assisting with steering and processing shocks from the uneven surface of the road. They have four main parts, which are the beam, the swivel pin, the track rod, and the stub axle.
+           <br><br>  <h3>- Rear Axle.</h3> The rear axle is located between the differential and the driving wheels and transmits power between the two. The rear axle is actually two halves – connected by the differential – with each part known as the half shaft. </p>
+            <br>
+            <p>This axle is responsible for delivering power to the driving wheels. It comes in two halves, which are connected by the differential. In most vehicles, the rear axles rotate with the vehicle’s wheels.</p>
+            <br>
+  
+  
+  
+            <span>9. Suspension System</span>
+            <p>The function of the suspension system is to absorb vibrations due to the up and down motion of wheels, caused by the irregularities in the road surface. The springs, connecting linkages, and shock absorber comprise the suspension system of a vehicle. </p>
+            <br>
+            <p>In the rigid system, the road springs are attached to a rigid beam axle. It is mostly used in the front axle of commercial vehicles and in the rear axle of all types of vehicles. The independent system does not have a rigid axle. Each wheel is free to move vertically without any reaction on its mating wheel. The independent system is mostly used in small cars </p>
+            <br>
+            
+  
+  
+  
+            <span>10. Braking System</span>
+            <p>Brakes are required for slowing down or stopping a moving vehicle. The braking system is essential for the safety of passengers, and passers-by on roads. The braking system may be operated mechanically or hydraulically. 95 percent of the braking systems in use today are of the hydraulic type.
+  
+              All brakes consist of two members, one rotating and the other stationery. There are various means by which the two members can be brought in contact, thus reducing the speed of the vehicle.</p>
+            <br>
+            <p> The major components of the braking system are the brake pedal, master cylinder, wheel cylinders, brake drum, brake pipe, brake shoes, brake packing plant, and linkages.</p>
+            <br>
+            <p>As the load on the vehicle and the vehicle speed has increased according to recent trends, in modern days, the importance of the brake system has also increased and power brakes are now being preferred. Power brakes utilize vacuum and air pressure to provide most of the brake-applying effort.</p>
+            <br>
+  
+            <h3>Related Articles :-</h3>
+               <a href="https://www.engineeringchoice.com/what-is-shock-absorber/">-What is Shock Absorber?</a><br>
+               <a href="https://www.engineeringchoice.com/what-is-brake/">-What is Brake and its types?</a>
+               <br><br>
+  
+  
+  
+           
+            <span>11. Gear Shift</span>
+            <p>The gearshift is used to move a vehicle forward, in reverse, or remain neutral. On cars with a manual transmission, the gearshift is actually a stick shift.
+  
+              A gear stick, gearshift, or shifter, more formally known as a transmission lever, is a metal lever attached to the transmission of an automobile.</p>
+            <br>
+            <p> The term gear stick mostly refers to the shift lever of a manual transmission, while in an automatic transmission, a similar lever is known as a gear selector.
+  
+              A gear stick will normally be used to change gear whilst depressing the clutch pedal with the left foot to disengage the engine from the drivetrain and wheels.</p>
+            <br>
+            <p>Automatic transmission vehicles, including hydraulic (torque converter) automatic transmissions, automated manual and older semi-automatic transmissions (specifically clutchless manuals), like VW Autos, tick, and those with continuously variable transmissions, do not require a physical clutch pedal.</p>
+            <br>
+  
+            <h3>Related Articles :-</h3>
+               <a href="https://www.engineeringchoice.com/what-is-gearbox/">-What is Gear Box in Car?</a><br>
+               <a href="https://www.engineeringchoice.com/what-is-an-automatic-transmission-and-how-does-it-work/">-What is Automatic Transmission?</a>
+               <br><br>
+  
+  
+  
+  
+            <span>12. Steering System</span>
+            <p>The steering system is used for changing the direction of the vehicle. The major requirements in any steering mechanism are that it should be precise and easy to handle and that the front wheels should have a tendency to return to the straight-ahead position after a turn.</p>
+            <br>
+            <p> A gear mechanism, which is known as steering gear, is used in this system to increase the steering effort provided by the driver. This system makes the car steering very easy as the driver does not have to put in much effort.</p>
+            <br>
+            <p>Car steering is not only required on a curved road but also while maneuvering on busy traffic roads. The steering system allows the vehicle to be guided, i.e., to be turned left or right.
+  
+              Modern steering wheels also often have accessory functions built-in, such as cruise control, audio system selection, and volume. Some steering wheels are even electrically heated.</p>
+            <br>
+  
+  
+  
+  
+            <span>13. Windscreen</span>
+            <p>The windshield or windscreen is the front window, which provides visibility while protecting occupants from the elements.
+  
+              Modern windshields are generally made of laminated safety glass, a type of treated glass, which consists of, typically, two curved sheets of glass with a plastic layer laminated between them for safety, and bonded into the window frame.</p>
+            <br>
+            <p> Windshields protect the vehicle’s occupants from wind and flying debris such as dust, insects, and rocks, and provide an aerodynamically formed window towards the front. UV coating may be applied to screen out harmful ultraviolet radiation.</p>
+            <br>
+            <p>However, this is usually unnecessary since most auto windshields are made from laminated safety glass. The majority of UV-B is absorbed by the glass itself, and any remaining UV-B together with most of the UV-A is absorbed by the PVB bonding layer.</p>
+            <br>
+  
+  
+  
+  
+            <span>14. Speedometer</span>
+            <p>A speedometer, an instrument that indicates the speed of a vehicle, is usually combined with a device known as an odometer that records the distance traveled.</p>
+            <br>
+            <p>A speedometer or a speed meter is a gauge that measures and displays the instantaneous speed of a vehicle. Now universally fitted to motor vehicles, they started to be available as options in the early 20th century, and as standard equipment from about 1910 onwards. </p>
+            <br>
+            <p>Speedometers for other vehicles have specific names and use other means of sensing speed. For a boat, this is a pit log. For an aircraft, this is an airspeed indicator.</p>
+            <br>
+  
+  
+  
+  
+            <span>15. Fuel Tank</span>
+            <p>The fuel tank on your car is typically located under the rear or middle of the vehicle. There can be a number of reasons why you would need to remove it; the most common reason is needing to replace the fuel pump.</p>
+            <br>
+            <p>This tank can be filled from the outside via a small hole that is sealed with a gas cap when not in use. The gas then goes through a few steps before it reaches the engine. The pump pushes gasoline into the fuel lines. </p>
+            <br>
+            <p>There are hard metal fuel lines in most vehicles that run the fuel from the tank towards the engine.</p>
+            <br>
+  
+  
+  
+            <span>16. Trunk</span>
+            <p>Typically, a car trunk is the primary storage area for cargo or luggage in a sedan, coupe, or convertible. The word “trunk” is used primarily in North America, while the word “boot” is often used in other English-speaking countries.</p>
+            <br>
+            <p>Prior to the introduction of automobiles, the boot was a compartment that was built into a horse-drawn carriage. It was usually used as a seating area for the coachman. Later, it was used for storage purposes. </p>
+            <br>
+            <p>The car trunk is typically located in the rear of the car in most models. In some vehicles in which the engine is located in the middle of the rear of the vehicle, the trunk is located at the front. In some models, there have been two trunk compartments.</p>
+            <br>
+          </div>
+          <h1>Car Parts Video:</h1>
+          <iframe width="1160" height="515" src="https://www.youtube.com/embed/z5sORo2v0l0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          
+        </div>
+     
+  
+        
+      </body>
+      <!-- {% include "vehicle/footer.html" %} -->

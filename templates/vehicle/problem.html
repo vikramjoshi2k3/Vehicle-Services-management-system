@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Service Website</title>
+    <!-- <link rel="stylesheet" href="aboutstyle.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #fe5b3d;
+    --second-color: #ffac38;
+    --text-color: #444;
+    --gradiant: linear-gradient(#fe5b3d, #ffac38);
+
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 50px 100px;
+
+}
+
+
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size:400px 400px;
+    display: grid;
+    align-items: center;
+    margin-top: -100px ;
+    margin-bottom: -10rem;
+    
+    
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    align-items: center;
+    margin-left: 400px;
+}
+
+.text span{
+    color: var(--main-color);
+}
+
+.text p{
+    margin: 00.5rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.text a{
+    color:rgb(255, 200, 0) ;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.heading h1{
+    font-size: 2rem;
+}
+
+
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.about-img img{
+    width: 700px;
+    margin-left: 370px;
+}
+
+.about-img1 img{
+    width: 800px;
+    margin-left: 340px;
+    margin-top: -50px;
+}
+
+
+
+.reviews-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, auto));
+    gap: 1rem;
+    margin-top: 0rem;
+}
+
+.rev-img {
+    width: 70px;
+    height: 70px;
+}
+
+.rev-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+
+.reviews-container .box{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.reviews-container .box h1{
+    font-size: 2rem;
+    
+
+}
+.reviews-container .box span{
+    
+    color: #c12e21;
+    font-size: 1.5rem;
+
+}
+
+.reviews-container .box p{
+    font-style: initial;
+    color: #555ca4;
+    font-size: 1.2rem;
+
+}
+
+.reviews-container .box .stars .bx{
+    color: var(--main-color);
+}
+
+ .lbtn{
+    background: #474fa0;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+
+}
+
+ .lbtn:hover {
+    background: var(--main-color);
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    background: #474fa0;
+    padding: 20px;
+    border-radius: 0.5rem;
+}
+
+.cont h1,i{
+    color:#ffac38;
+}
+
+.home1 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size:400px 400px;
+    display: grid;
+    align-items: center;
+    margin-top: -100px ;
+    margin-bottom: -10rem;
+    
+    
+}
+
+.text1 h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    align-items: center;
+    margin-left: 400px;
+}
+
+.text1 span{
+    color: var(--main-color);
+}
+
+.text1 p{
+    margin: 00.5rem 0 1rem;
+    font-size: 1.1rem;
+}
+
+.text1 a{
+    color:rgb(255, 145, 0) ;
+}
+
+.text1 span{
+    color: #c12e21;
+    font-size: 30px;
+}
+
+
+
+/*problems page*/
+
+.homep {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size:400px 400px;
+    display: grid;
+    align-items: center;
+    margin-top: -100px ;
+    margin-bottom: -10rem;
+    
+    
+}
+
+.textp h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    align-items: center;
+    margin-left: 70px;
+}
+
+.textp span{
+    color: var(--main-color);
+}
+
+.textp p{
+    margin: 00.5rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.textp a{
+    color:rgb(255, 200, 0) ;
+}
+
+.grib{
+  
+    height: 1500px;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 350px 350px ;
+    grid-template-rows: 350px 350px ;
+    column-gap: 230px;
+}
+
+.gri{
+    height: 310px;
+    width: 110px;
+
+}
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+    {% include "vehicle/navbar.html" %}
+    
+
+    <section class="homep" id="homep">
+        <div class="textp">
+          <h1>Common  Problems And How To Fix Them</h1>
+          <p>
+              Knowing how the engine works, it is important to know some of the issues you may face in your driving experience. Here are some common engine failures that most car owners face and how to diagnose engine problems:
+          </p>
+          </div>
+  
+       
+        
+        
+      </section>
+      <section class="about" id="about">
+          <div class="heading">
+           
+              
+          </div>
+         <div class="about-container">
+          <div class="about-img1">
+              <img src='{% static "images/prob.jpg" %}' alt="">
+          </div>
+          
+         </div>
+  
+      </section>
+  
+      <section class="home1" id="home">
+          <div class="text1">
+  
+            <span>1. Poor Lubrication</span>
+            <p>It’s absolutely vital that your engine receives enough oil between its moving parts. A lack of lubrication will cause unnecessary friction inside the engine, leading to overheating and worse still, the engine seizing up. Make sure that you get your vehicle periodically serviced, which includes a regular oil change to keep quantities at an appropriate level.</p>
+            <br>
+           
+  
+            <span>2. Failing Oil Pump</span>
+            <p>The failure of an oil pump is extremely serious for the lifespan of any engine. If an oil pump fails it will almost certainly starve the engine of necessary lubrication. Always ensure that the engine oil you use in your engine is of a genuine viscosity, making it light enough to flow fast through the pump.</p>
+            
+            <br>
+  
+            <span>3. Inadequate Fuel And Air Compression</span>
+            <p>Poor compression of both fuel and air inside a car engine is a recipe for disaster. The most common reasons for poor engine combustion are due to broken valve seals, holes within cylinders, and overused piston rings, forcing air to leak out.</p>
+            
+            <br>
+  
+  
+            <span>4. The Engine Will Not Start</span>
+            <p>This is one of the worst car engine problems that vehicle owners face. There are various reasons why a vehicle can fail to start.
+  
+              One of the most common reasons is a battery-related problem. It could be that the battery is discharged or dead and need to jump-start. In case it is a problem with the battery, you will hear some clicking sound.</p>
+            <br>
+            <p>Another reason would be the vehicle is having a problem with the starter. The starter gets the engine moving, and therefore if it has a problem, it will not start. It could also be due to a clogged fuel filter. The combustion process will not initiate if there is a problem with the fuel pump or the fuel filter is obstructed. </p>
+            <br>
+            <p>A vehicle will fail to start due to a broken ignition switch, battery cables, or failure in the catalytic converter. If the problem is the battery, get a jumper cable and try jump-starting the vehicle. If it is for another reason, then you need to visit a mechanic.
+  
+          </p>
+          <img src='{% static "images/en.png" %}' alt="">
+            <br><br>
+  
+  
+  
+            <span>6. Clogged Radiator</span>
+            <p>Old engine coolant that’s not been kept clean over time can result in filling your engine’s radiators with unwanted sediment and deposits. This is another common cause of overheating engines. Try to avoid using hard water as a coolant because you will run the risk of the radiators corroding over time due to limescale.</p>
+            
+            <br>
+  
+  
+  
+            <span>7. Bad Engine Noise</span>
+            <p>The unusual sound coming from the engine bay is a sign that there is something wrong with your car’s engine. If you happen to hear vibrations or knocking sounds from the engine, the vehicle needs an urgent checkup.</p>
+            <br>
+            <p>The engine knocking sound is caused by bad timing, lean fuel, and air mixture, bad knock sensor, worn bearings, or worn-out belt tensioners. A mechanic will tell you which of these is causing the irritating noises and advice you accordingly.</p>
+            <br>
+           
+  
+  
+            <span>8. Faulty Sensors</span>
+            <p>A faulty sensor can cause severe engine problems. The engine in your car has various sensors, and they all perform different tasks. One of the most important sensors in your car is the oxygen sensor.</p>
+            <br>
+            <p>It measures the amount of unburnt oxygen in the exhaust gases. The car computer uses this data to adjust the air-fuel mixture. If there is an issue with this sensor, your car will receive incorrect information. This causes lower gas mileage or reduced engine power.</p>
+            <br>
+            
+  
+            <span>9. Car Not Accelerating Properly</span>
+            <p>If your car is not speeding up the way it used to, perhaps something is wrong with the engine. This problem is most common in high mileage vehicles. Some causes of poor acceleration are minor, and you can fix them easily when you discover them early.</p>
+            <br>
+            <p>Poor engine acceleration can result from malfunctioning or clogged mass airflow sensor, malfunctioning oxygen sensor, timing belt, or the fuel filter. The issue can also be caused by low clutch fluid, worn-out clutch pedal, or errors in the ECU.</p>
+            <br>
+            
+  
+  
+            <span>10. Smoke From The Engine</span>
+            <p>Blue or white smoke coming out of an exhaust pipe is a bad sign. If you see smoke coming out of your car, go to an auto repair shop immediately to fix it. Now, what can cause the smoke from the car exhaust? Well, there are various reasons why it happens.</p>
+            <br>
+            <p>One cause of blue smoke is high oil consumption. Other causes of blue smoke are worn valve guide seals, damaged piston rings, or poor crankcase ventilation. White smoke from the exhaust pipe is a sign of the engine burning coolant or a broken head gasket.</p>
+            <br>
+         
+  
+  
+            <span> 11. Engine Knocking</span>
+            <p>At some point, the engine in your car may produce a loud knocking sound. This engine knock is also known as “detonation,” “spark knock,” or pinging. This issue occurs if fuel fails to burn evenly in the cylinders.</p>
+            <br>
+            <p>This results in annoying noises coming from the engine. But why does it happen? One of the common reasons is using fuel that is low in quality or octane value. It can also happen if you have the wrong spark plugs in your engine.</p>
+            
+            <br>
+  
+  
+            <span>12. Stalling</span>
+            <p>Staling is when the engine stops suddenly, either while driving or coming to a stop. This is a common engine-related problem that should be taken seriously. A car stopping in the middle of a road with no warning is quite risky.</p>
+            <br>
+            <p>Various issues can cause this nuisance. Your engine might have a problem within fuel lines, a vacuum leak, or a faulty sensor. Bad spark plugs may also cause this problem. If this happens to your vehicle, have a professional check it immediately.</p>
+            <br>
+            
+  
+  
+  
+            <span>13. Piston And Piston Ring Problems</span>
+            <p>Piston and piston rings are some of the key engine components. Pistons produce the power needed to move a car. With damaged pistons or piston rings, the engine in your car will produce less power.</p>
+            <br>
+            <p>There are several symptoms that will let you know there is something wrong with the piston and piston rings. They range from blue smoke in the exhaust, engine misfire to loud rattling sounds. The oil filler cap and dipstick might pop off because of excessive crankcase pressure.</p>
+            <br>
+           
+  
+  
+            <span>14. Water In The Engine Oil</span>
+            <p>If the color of motor oil turns white, do not ignore it. It is a clear sign of mixing water with oil. Other possible causes are:
+              <br>
+              -Cracked engine head<br>
+              -Faulty oil cooler<br>
+              -Cracked engine block</p>
+            <br>
+            <p>You must track down the cause of this problem to have an experienced mechanic resolve the issue.</p>
+            <br>
+           
+  
+  
+  
+            <span>15. The Steering Wheel Is Shaking</span>
+            <p>There are a number of reasons why a steering wheel shakes when driving a vehicle. Damaged suspension components or wheel bearings are usually to blame if this happens immediately after you start the car and pull away.</p>
+            <br>
+            <p>If the wheel shakes at higher speeds it is more often an issue with tire/wheel balance. To resolve this, you will need to take the car for a proper mechanical inspection. It could be as simple a fix as getting your wheels aligned.</p>
+            <br>
+            
+  
+  
+            <span>16. The Brake Pads Are Worn</span>
+            <p>Brakes will naturally wear down with use so it is vital that you keep on top of maintenance and make sure any problem is resolved long before the brakes fail. Sometimes factory defects mean that brake pads and rotors wear out more quickly than they would normally.</p>
+            <img src='{% static "images/bp.jpg" %}' alt="">
+            <br>
+            
+  
+  
+            <span>17. The Tires Are Flat</span>
+            <p>A tire will obviously be flat if it is punctured but it can also be caused by normal wear and tear. Keeping the tires rotated in accordance with the manufacturer’s instructions can help extend their life. The best practice is to rotate the tires when you change your engine oil or every 5,000 miles.</p>
+            <img src='{% static "images/ft.jpg" %}' alt="">
+            <br>
+  
+  
+  
+            <span>18. The Radiator Is Leaking</span>
+            <p>Radiator leaks are almost always caused by corrosion. Corrosion itself can have a lot of causes but once you get one leak you are likely to get more so it makes sense to replace the whole radiator. If you don’t keep the radiator in good condition, you can get problems with overheating and, ultimately, could end up with an engine fire.</p>
+            
+            <br>
+  
+  
+            <span>19. The Car Gives Out Excessive Emissions</span>
+            <p>The emission system is designed to keep pollution to a minimum while making sure your car runs properly. The system includes a lot of sensitive equipment that can fail from time to time and these cause a variety of different problems in the car. For example, an O2 sensor that is faulty may start affecting the fuel mixture, leading to inefficiencies in the running and economy of the vehicle.</p>
+            <br>
+            <p></p>
+            <br>
+            <p></p>
+            <br>
+  
+  
+            <span>20. My Fuel Economy Is Falling</span>
+            <p>If the engine runs efficiently, it will burn fuel at a better rate but if parts of the systems start to wear out and are not replaced you will find the mileage will drop. Keeping on top of things like your fuel and air filters, O2, and mass air sensors, with a proactive servicing regime will keep your car running efficiently.</p>
+            <br>
+            <p>The bottom line is that fuel economy depends on how well you maintain the engine. Making sure that the vehicle is regularly serviced, with appropriate oil changes, filter changes and new spark plugs can make all the difference when it comes to mileage.</p>
+            <br>
+            
+  
+            <span>21. There Are A Few Minor Issues:</span>
+            <p>Scratches, Streaking Wipers, and Poor Paintwork: These things are often annoying but don’t need immediate attention. Fixing them is also cheap and easy: Some cleaner wax and paint to cover scratches, new windscreen wipers cost just a few pounds and paint defects are nearly always cosmetic. If you do see any small rust spots, make sure you deal with these so they don’t turn into a bigger problem later on.</p>
+            <br>
+            <p></p>
+            <br>
+            <p></p>
+            <br>
+          
+          </div>
+          <h1>Some related Videos:</h1><br>
+          <div class="grib">
+          <div class="gri">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/SbNwS1qXj1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="gri">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/O1hF25Cowv8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div>
+        
+          <div class="gri">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/6RQ9UabOIPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+  
+          <div class="gri">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/314HE4aMG-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+  
+  
+          <div class="gri">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/auhfI1zWBco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+  
+          <div class="gri">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/PRSoRkM8GcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+         </div>
+      </div>
+     
+
+</body>
